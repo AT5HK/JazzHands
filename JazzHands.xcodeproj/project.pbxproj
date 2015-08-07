@@ -13,6 +13,8 @@
 		501BFE551B753478008548CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501BFE541B753478008548CA /* Images.xcassets */; };
 		501BFE581B753478008548CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501BFE561B753478008548CA /* LaunchScreen.xib */; };
 		501BFE641B753478008548CA /* JazzHandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BFE631B753478008548CA /* JazzHandsTests.swift */; };
+		501BFE701B75433B008548CA /* TourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BFE6F1B75433B008548CA /* TourController.swift */; };
+		CCBF3BF96DD4BB0A0CCFC73B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E2EA43231C9AEE4F371DCF /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,12 @@
 		501BFE5D1B753478008548CA /* JazzHandsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JazzHandsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		501BFE621B753478008548CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		501BFE631B753478008548CA /* JazzHandsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazzHandsTests.swift; sourceTree = "<group>"; };
+		501BFE6D1B753505008548CA /* podFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podFile; sourceTree = "<group>"; };
+		501BFE6E1B753808008548CA /* JazzHands-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JazzHands-Bridging-Header.h"; sourceTree = "<group>"; };
+		501BFE6F1B75433B008548CA /* TourController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourController.swift; sourceTree = "<group>"; };
+		72E2EA43231C9AEE4F371DCF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3E5F949E06F4D2587CC8FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E7C6BC91D95A9ACA071625EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCBF3BF96DD4BB0A0CCFC73B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +68,13 @@
 		501BFE3F1B753477008548CA = {
 			isa = PBXGroup;
 			children = (
+				501BFE6E1B753808008548CA /* JazzHands-Bridging-Header.h */,
+				501BFE6D1B753505008548CA /* podFile */,
 				501BFE4A1B753478008548CA /* JazzHands */,
 				501BFE601B753478008548CA /* JazzHandsTests */,
 				501BFE491B753478008548CA /* Products */,
+				DA9EF5CC358B8D825577CFCD /* Pods */,
+				5B8D24717E88C512441F59A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +92,7 @@
 			children = (
 				501BFE4D1B753478008548CA /* AppDelegate.swift */,
 				501BFE4F1B753478008548CA /* ViewController.swift */,
+				501BFE6F1B75433B008548CA /* TourController.swift */,
 				501BFE511B753478008548CA /* Main.storyboard */,
 				501BFE541B753478008548CA /* Images.xcassets */,
 				501BFE561B753478008548CA /* LaunchScreen.xib */,
@@ -112,6 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5B8D24717E88C512441F59A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72E2EA43231C9AEE4F371DCF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA9EF5CC358B8D825577CFCD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7C6BC91D95A9ACA071625EA /* Pods.debug.xcconfig */,
+				DE3E5F949E06F4D2587CC8FA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 501BFE671B753478008548CA /* Build configuration list for PBXNativeTarget "JazzHands" */;
 			buildPhases = (
+				05F00B282396D111E244C716 /* Check Pods Manifest.lock */,
 				501BFE441B753478008548CA /* Sources */,
 				501BFE451B753478008548CA /* Frameworks */,
 				501BFE461B753478008548CA /* Resources */,
+				49721582DE487C76EC223F77 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,11 +240,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05F00B282396D111E244C716 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		49721582DE487C76EC223F77 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		501BFE441B753478008548CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				501BFE701B75433B008548CA /* TourController.swift in Sources */,
 				501BFE501B753478008548CA /* ViewController.swift in Sources */,
 				501BFE4E1B753478008548CA /* AppDelegate.swift in Sources */,
 			);
@@ -338,21 +405,25 @@
 		};
 		501BFE681B753478008548CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7C6BC91D95A9ACA071625EA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JazzHands/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JazzHands-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		501BFE691B753478008548CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE3E5F949E06F4D2587CC8FA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JazzHands/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JazzHands-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +480,7 @@
 				501BFE691B753478008548CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		501BFE6A1B753478008548CA /* Build configuration list for PBXNativeTarget "JazzHandsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +489,7 @@
 				501BFE6C1B753478008548CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
