@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		501BFE4E1B753478008548CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BFE4D1B753478008548CA /* AppDelegate.swift */; };
+		501BFE501B753478008548CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BFE4F1B753478008548CA /* ViewController.swift */; };
+		501BFE531B753478008548CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 501BFE511B753478008548CA /* Main.storyboard */; };
+		501BFE551B753478008548CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501BFE541B753478008548CA /* Images.xcassets */; };
+		501BFE581B753478008548CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501BFE561B753478008548CA /* LaunchScreen.xib */; };
+		501BFE641B753478008548CA /* JazzHandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BFE631B753478008548CA /* JazzHandsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		501BFE5E1B753478008548CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 501BFE401B753477008548CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 501BFE471B753478008548CA;
+			remoteInfo = JazzHands;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		501BFE481B753478008548CA /* JazzHands.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazzHands.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		501BFE4C1B753478008548CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		501BFE4D1B753478008548CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		501BFE4F1B753478008548CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		501BFE521B753478008548CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		501BFE541B753478008548CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		501BFE571B753478008548CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		501BFE5D1B753478008548CA /* JazzHandsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JazzHandsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		501BFE621B753478008548CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		501BFE631B753478008548CA /* JazzHandsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazzHandsTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		501BFE451B753478008548CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		501BFE5A1B753478008548CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		501BFE3F1B753477008548CA = {
+			isa = PBXGroup;
+			children = (
+				501BFE4A1B753478008548CA /* JazzHands */,
+				501BFE601B753478008548CA /* JazzHandsTests */,
+				501BFE491B753478008548CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		501BFE491B753478008548CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				501BFE481B753478008548CA /* JazzHands.app */,
+				501BFE5D1B753478008548CA /* JazzHandsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		501BFE4A1B753478008548CA /* JazzHands */ = {
+			isa = PBXGroup;
+			children = (
+				501BFE4D1B753478008548CA /* AppDelegate.swift */,
+				501BFE4F1B753478008548CA /* ViewController.swift */,
+				501BFE511B753478008548CA /* Main.storyboard */,
+				501BFE541B753478008548CA /* Images.xcassets */,
+				501BFE561B753478008548CA /* LaunchScreen.xib */,
+				501BFE4B1B753478008548CA /* Supporting Files */,
+			);
+			path = JazzHands;
+			sourceTree = "<group>";
+		};
+		501BFE4B1B753478008548CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				501BFE4C1B753478008548CA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		501BFE601B753478008548CA /* JazzHandsTests */ = {
+			isa = PBXGroup;
+			children = (
+				501BFE631B753478008548CA /* JazzHandsTests.swift */,
+				501BFE611B753478008548CA /* Supporting Files */,
+			);
+			path = JazzHandsTests;
+			sourceTree = "<group>";
+		};
+		501BFE611B753478008548CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				501BFE621B753478008548CA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		501BFE471B753478008548CA /* JazzHands */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 501BFE671B753478008548CA /* Build configuration list for PBXNativeTarget "JazzHands" */;
+			buildPhases = (
+				501BFE441B753478008548CA /* Sources */,
+				501BFE451B753478008548CA /* Frameworks */,
+				501BFE461B753478008548CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JazzHands;
+			productName = JazzHands;
+			productReference = 501BFE481B753478008548CA /* JazzHands.app */;
+			productType = "com.apple.product-type.application";
+		};
+		501BFE5C1B753478008548CA /* JazzHandsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 501BFE6A1B753478008548CA /* Build configuration list for PBXNativeTarget "JazzHandsTests" */;
+			buildPhases = (
+				501BFE591B753478008548CA /* Sources */,
+				501BFE5A1B753478008548CA /* Frameworks */,
+				501BFE5B1B753478008548CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				501BFE5F1B753478008548CA /* PBXTargetDependency */,
+			);
+			name = JazzHandsTests;
+			productName = JazzHandsTests;
+			productReference = 501BFE5D1B753478008548CA /* JazzHandsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		501BFE401B753477008548CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = ASolo;
+				TargetAttributes = {
+					501BFE471B753478008548CA = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					501BFE5C1B753478008548CA = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 501BFE471B753478008548CA;
+					};
+				};
+			};
+			buildConfigurationList = 501BFE431B753477008548CA /* Build configuration list for PBXProject "JazzHands" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 501BFE3F1B753477008548CA;
+			productRefGroup = 501BFE491B753478008548CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				501BFE471B753478008548CA /* JazzHands */,
+				501BFE5C1B753478008548CA /* JazzHandsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		501BFE461B753478008548CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				501BFE531B753478008548CA /* Main.storyboard in Resources */,
+				501BFE581B753478008548CA /* LaunchScreen.xib in Resources */,
+				501BFE551B753478008548CA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		501BFE5B1B753478008548CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		501BFE441B753478008548CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				501BFE501B753478008548CA /* ViewController.swift in Sources */,
+				501BFE4E1B753478008548CA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		501BFE591B753478008548CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				501BFE641B753478008548CA /* JazzHandsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		501BFE5F1B753478008548CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 501BFE471B753478008548CA /* JazzHands */;
+			targetProxy = 501BFE5E1B753478008548CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		501BFE511B753478008548CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				501BFE521B753478008548CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		501BFE561B753478008548CA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				501BFE571B753478008548CA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		501BFE651B753478008548CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		501BFE661B753478008548CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		501BFE681B753478008548CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JazzHands/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		501BFE691B753478008548CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JazzHands/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		501BFE6B1B753478008548CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JazzHandsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JazzHands.app/JazzHands";
+			};
+			name = Debug;
+		};
+		501BFE6C1B753478008548CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JazzHandsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JazzHands.app/JazzHands";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		501BFE431B753477008548CA /* Build configuration list for PBXProject "JazzHands" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				501BFE651B753478008548CA /* Debug */,
+				501BFE661B753478008548CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		501BFE671B753478008548CA /* Build configuration list for PBXNativeTarget "JazzHands" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				501BFE681B753478008548CA /* Debug */,
+				501BFE691B753478008548CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		501BFE6A1B753478008548CA /* Build configuration list for PBXNativeTarget "JazzHandsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				501BFE6B1B753478008548CA /* Debug */,
+				501BFE6C1B753478008548CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 501BFE401B753477008548CA /* Project object */;
+}
