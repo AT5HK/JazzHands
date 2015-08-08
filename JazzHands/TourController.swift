@@ -12,7 +12,6 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
     
     var newAnimator:IFTTTAnimator!
     
-    var numberOfPages: Int?
     var appNameLabel: UILabel!
     
     var label1: UILabel!
@@ -34,10 +33,17 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
         setupViews()
         setupAnimations()
     }
+    
+    override func numberOfPages() -> UInt {
+        return 4
+    }
 
     //MARK - Setup methods
     
     func setupViews() {
+        
+        
+        
         appNameLabel = UILabel(frame: CGRect(x: 50, y: 50, width: 100, height: 100))
         view.backgroundColor = UIColor.whiteColor()
         
@@ -79,6 +85,7 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
         contentView.addSubview(mangoLogo)
         contentView.addSubview(tour1)
         
+        
         //constraints
         
         let appNameLabelConstraint = NSLayoutConstraint(
@@ -99,17 +106,8 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
             attribute: NSLayoutAttribute.CenterY,
             multiplier: 1, constant: 0)
         
-        let mangoLogoConstraintX = NSLayoutConstraint(
-            item: mangoLogo,
-            attribute: NSLayoutAttribute.CenterX,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: view,
-            attribute: NSLayoutAttribute.CenterX,
-            multiplier: 1, constant: 0)
-        
         mangoLogo.setTranslatesAutoresizingMaskIntoConstraints(false)
         view.addConstraint(mangoLogoConstraintY)
-        view.addConstraint(mangoLogoConstraintX)
         
         //second page title constraint
         
@@ -148,6 +146,18 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
         view.addConstraint(tour1WidthConstraint)
         view.addConstraint(tour1HeightConstraint)
         view.addConstraint(tour1ConstraintY)
+        
+        //magicMike constraint
+        
+        let magicMikeConstraintY = NSLayoutConstraint(
+            item: magicMike,
+            attribute: NSLayoutAttribute.CenterY,
+            relatedBy: NSLayoutRelation.Equal, toItem: view,
+            attribute: NSLayoutAttribute.CenterY,
+            multiplier: 1, constant: 0)
+        
+        magicMike.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view.addConstraint(magicMikeConstraintY)
         
         //set animations
         let constraintAnimation = IFTTTConstraintConstantAnimation(superview: view, constraint: mangoLogoConstraintY)
@@ -198,6 +208,11 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
         
         //fourth page
         keepView(label4, onPage: 3)
+        
+        //multi page
+        keepView(mangoLogo, onPages: [(0), (1)])
+        keepView(magicMike, onPages: [(1), (2)])
+        
         
         
         
