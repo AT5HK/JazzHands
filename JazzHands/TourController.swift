@@ -86,7 +86,7 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
         contentView.addSubview(tour1)
         
         
-        //constraints
+        //appNameLabel title constraints
         
         let appNameLabelConstraint = NSLayoutConstraint(
             item: appNameLabel,
@@ -96,6 +96,18 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
             multiplier: 1, constant: 60)
         
         view.addConstraint(appNameLabelConstraint)
+        
+        //label1 Constraint
+        
+        let label1Constraint = NSLayoutConstraint(
+            item: label1,
+            attribute: NSLayoutAttribute.BottomMargin,
+            relatedBy: NSLayoutRelation.Equal, toItem: appNameLabel,
+            attribute: NSLayoutAttribute.BottomMargin,
+            multiplier: 1, constant: 60)
+        
+        view.addConstraint(label1Constraint)
+        
         //mango constraint
         
         let mangoLogoConstraintY = NSLayoutConstraint(
@@ -109,7 +121,7 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
         mangoLogo.setTranslatesAutoresizingMaskIntoConstraints(false)
         view.addConstraint(mangoLogoConstraintY)
         
-        //second page title constraint
+        //label2 constraint
         
         let label2Constraint = NSLayoutConstraint(
             item: label2,
@@ -134,14 +146,14 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
             attribute: NSLayoutAttribute.Width,
             relatedBy: NSLayoutRelation.Equal, toItem: view,
             attribute: NSLayoutAttribute.Width,
-            multiplier: 0.3, constant: 0)
+            multiplier: 1, constant: 0)
         
         let tour1HeightConstraint = NSLayoutConstraint(
             item: tour1,
             attribute: NSLayoutAttribute.Height,
             relatedBy: NSLayoutRelation.Equal, toItem: view,
             attribute: NSLayoutAttribute.Height,
-            multiplier: 0.1, constant: 0)
+            multiplier: 1, constant: 0)
         
         view.addConstraint(tour1WidthConstraint)
         view.addConstraint(tour1HeightConstraint)
@@ -158,6 +170,82 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
         
         magicMike.setTranslatesAutoresizingMaskIntoConstraints(false)
         view.addConstraint(magicMikeConstraintY)
+        
+        //label3 constraint
+        
+        let label3Constraint = NSLayoutConstraint(
+            item: label3,
+            attribute: NSLayoutAttribute.TopMargin,
+            relatedBy: NSLayoutRelation.Equal, toItem: view,
+            attribute: NSLayoutAttribute.TopMargin,
+            multiplier: 1, constant: 160)
+        
+        view.addConstraint(label3Constraint)
+        
+        //detail constraint
+        
+        let detailConstraint = NSLayoutConstraint(
+            item: detail,
+            attribute: NSLayoutAttribute.BottomMargin,
+            relatedBy: NSLayoutRelation.Equal, toItem: view,
+            attribute: NSLayoutAttribute.BottomMargin,
+            multiplier: 1, constant: 0)
+        
+        let detailWidthConstraint = NSLayoutConstraint(
+            item: detail,
+            attribute: NSLayoutAttribute.Width,
+            relatedBy: NSLayoutRelation.Equal, toItem: view,
+            attribute: NSLayoutAttribute.Width,
+            multiplier: 1, constant: 0)
+        
+        let detailHeightConstraint = NSLayoutConstraint(
+            item: detail,
+            attribute: NSLayoutAttribute.Height,
+            relatedBy: NSLayoutRelation.Equal, toItem: view,
+            attribute: NSLayoutAttribute.Height,
+            multiplier: 0.3, constant: 0)
+        
+        view.addConstraint(detailConstraint)
+        view.addConstraint(detailWidthConstraint)
+        view.addConstraint(detailHeightConstraint)
+        
+        //label4 constraint
+        
+        let label4Constraint = NSLayoutConstraint(
+            item: label4,
+            attribute: NSLayoutAttribute.TopMargin,
+            relatedBy: NSLayoutRelation.Equal, toItem: view,
+            attribute: NSLayoutAttribute.TopMargin,
+            multiplier: 1, constant: 160)
+        
+        view.addConstraint(label4Constraint)
+        
+        //nearby constraint
+        
+        let nearbyConstraint = NSLayoutConstraint(
+            item: nearby,
+            attribute: NSLayoutAttribute.TopMargin,
+            relatedBy: NSLayoutRelation.Equal, toItem: label4,
+            attribute: NSLayoutAttribute.BottomMargin,
+            multiplier: 1, constant: 40)
+        
+        let nearbyWidthConstraint = NSLayoutConstraint(
+            item: nearby,
+            attribute: NSLayoutAttribute.Width,
+            relatedBy: NSLayoutRelation.Equal, toItem: view,
+            attribute: NSLayoutAttribute.Width,
+            multiplier: 1, constant: 0)
+        
+        let nearbyHeightConstraint = NSLayoutConstraint(
+            item: nearby,
+            attribute: NSLayoutAttribute.Height,
+            relatedBy: NSLayoutRelation.Equal, toItem: view,
+            attribute: NSLayoutAttribute.Height,
+            multiplier: 0.5, constant: 0)
+        
+        view.addConstraint(nearbyConstraint)
+        view.addConstraint(nearbyWidthConstraint)
+        view.addConstraint(nearbyHeightConstraint)
         
         //set animations
         let constraintAnimation = IFTTTConstraintConstantAnimation(superview: view, constraint: mangoLogoConstraintY)
@@ -205,9 +293,11 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
         
         //third page
         keepView(label3, onPage: 2)
+        keepView(detail, onPage: 2)
         
         //fourth page
         keepView(label4, onPage: 3)
+        keepView(nearby, onPage: 3)
         
         //multi page
         keepView(mangoLogo, onPages: [(0), (1)])
