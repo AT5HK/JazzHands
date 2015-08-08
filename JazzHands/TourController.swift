@@ -29,23 +29,25 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
         super.viewDidLoad()
         
         newAnimator = IFTTTAnimator()
+        self.animateCurrentFrame()
+        self.newAnimator.animate(0)
         
         setupViews()
         setupAnimations()
     }
-    
+
     override func numberOfPages() -> UInt {
-        return 4
+        return 5
     }
 
     //MARK - Setup methods
     
     func setupViews() {
         
-        
-        
+
         appNameLabel = UILabel(frame: CGRect(x: 50, y: 50, width: 100, height: 100))
         view.backgroundColor = UIColor.whiteColor()
+        contentView.backgroundColor = UIColor.clearColor()
         
         label1 = UILabel(frame: CGRect(x: 50, y: 50, width: 100, height: 100))
         label2 = UILabel(frame: CGRect(x: 50, y: 50, width: 100, height: 100))
@@ -247,18 +249,45 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
         view.addConstraint(nearbyWidthConstraint)
         view.addConstraint(nearbyHeightConstraint)
         
-        //set animations
-        let constraintAnimation = IFTTTConstraintConstantAnimation(superview: view, constraint: mangoLogoConstraintY)
-        let shrinkAnimation = IFTTTScaleAnimation(view: mangoLogo)
+        //backgroundColorAnimation
         
-        newAnimator.addAnimation(constraintAnimation)
-        newAnimator.addAnimation(shrinkAnimation)
+        let viewBackgroundColor = IFTTTBackgroundColorAnimation(view: self.view)
         
-        constraintAnimation.addKeyframeForTime(0, constant:(mangoLogo.frame.height/2) - mangoLogo.frame.height)
-        constraintAnimation.addKeyframeForTime(1, constant:-(view.frame.height/2))
-        shrinkAnimation.addKeyframeForTime(0, scale: 1.0)
-        shrinkAnimation.addKeyframeForTime(1, scale: 0.5)
+        newAnimator.addAnimation(viewBackgroundColor)
         
+        viewBackgroundColor.addKeyframeForTime(0, color: UIColor.flatBlueColor())
+        viewBackgroundColor.addKeyframeForTime(1, color: UIColor.flatRedColor())
+        viewBackgroundColor.addKeyframeForTime(2, color: UIColor.flatWhiteColor())
+        viewBackgroundColor.addKeyframeForTime(3, color: UIColor.flatBlackColor())
+        viewBackgroundColor.addKeyframeForTime(4, color: UIColor.clearColor())
+        
+        //mangoLogo animation
+        let constraintAnimationML = IFTTTConstraintConstantAnimation(superview: view, constraint: mangoLogoConstraintY)
+        let shrinkAnimationML = IFTTTScaleAnimation(view: mangoLogo)
+        
+        newAnimator.addAnimation(constraintAnimationML)
+        newAnimator.addAnimation(shrinkAnimationML)
+        
+        constraintAnimationML.addKeyframeForTime(0, constant:(mangoLogo.frame.height/2) - mangoLogo.frame.height)
+        constraintAnimationML.addKeyframeForTime(1, constant:-(view.frame.height/2))
+        shrinkAnimationML.addKeyframeForTime(0, scale: 1.0)
+        shrinkAnimationML.addKeyframeForTime(1, scale: 0.5)
+        
+        //magicMike animation
+        
+        let shrinkAnimationMM = IFTTTScaleAnimation(view: magicMike)
+        
+        newAnimator.addAnimation(shrinkAnimationMM)
+        
+        shrinkAnimationMM.addKeyframeForTime(1, scale: 0.8)
+        shrinkAnimationMM.addKeyframeForTime(3, scale: 0.1)
+        
+        //view fadeout animation
+        let fadeAnimation = IFTTTAlphaAnimation(view: self.view)
+        
+        newAnimator.addAnimation(fadeAnimation)
+        
+//        fadeAnimation.addKeyframeForTime(<#time: CGFloat#>, alpha: <#CGFloat#>)
         
 //        Let's divide our tour into 5 pages, each with the following elements displayed:
 //        
@@ -302,24 +331,18 @@ class TourController: IFTTTAnimatedPagingScrollViewController, UIScrollViewDeleg
         //multi page
         keepView(mangoLogo, onPages: [(0), (1)])
         keepView(magicMike, onPages: [(1), (2)])
-        
-        
-        
-        
-        
+
     }
     
     //MARK scrollview delegate
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         super.scrollViewDidScroll(scrollView)
-        newAnimator.animate(scrollView.contentOffset.x/500)
+        newAnimator.animate(scrollView.contentOffset.x/400)
+        
+        if (scrollView.contentOffset.x > view.frame.width * 3.5) {
+            dismissViewControllerAnimated(false, completion: nil)
+        }
     }
     
-//    - (void)scrollViewDidScroll:(UIScrollView *)scrollView
-//    {
-//    [super scrollViewDidScroll:scrollView];
-//    [self.animator animate:scrollView.contentOffset.x];
-//    }
-
 }

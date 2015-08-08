@@ -18,6 +18,11 @@ class ViewController: UIViewController {
         
     }
     
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        modalPresentationStyle = .Popover
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
